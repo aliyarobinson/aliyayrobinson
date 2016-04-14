@@ -2,4 +2,45 @@ $font-size: 16px;
 $line-height: $font-size * 1.6;
 $h1-size: $font-size * 2; // all other fonts are related to $font-size.
 
-$green-dark: green;
+// Text Color
+$font-color-dark: #333333;
+$font-color: #666666;
+$font-color-light: #767676;
+
+// Form Background Color
+$body-bg-color: #f0f0f0;
+
+//Slider
+// $slider-bg-color: #b6b6b6;
+// $slider-active-bg-color: $primary-color;
+// $slider-disabled-color: #d2d2d2;
+
+//Colors
+$turqoise: #00c2b4;
+$azure: $primary-color;
+$emerald: #2db329;
+$amber: #ffa800;
+$ruby: #ed1c24;
+$red: #d5000e;
+$tourmaline: #a352cb;
+$amethyst: #e63262;
+$graphite: #b3b3b3;
+
+///////////////////
+
+//Color of Selected Objects
+$selected-color: #0086e6;
+
+//The Focus Indicator on Fields
+$focus-shadow: 0 0 3px #0095ff;
+
+//The Link Style
+$link-color: #0896e9;
+$link-hover-color: #0c7ad8;
+$link-active-color: #004096;
+
+//Breakpoint sizes
+$breakpoint-phone: 360px;
+$breakpoint-phone-to-tablet: 768px;
+$breakpoint-tablet-to-desktop: 1240px;
+$breakpoint-desktop-to-extralarge: 1479px;
