@@ -203,15 +203,24 @@ img {
 *******************************/
 .block {
   float: left;
-  padding: 0 0 0 20px; }
+  padding: 0 0 0 20px;
+  position: relative; }
+
+.block-1-wide {
+  width: 25%;
+  max-width: 240px; }
 
 .block-2-wide {
   width: 50%;
   max-width: 480px; }
 
-.block-1-wide {
-  width: 25%;
-  max-width: 240px; }
+.block-3-wide {
+  width: 75%;
+  max-width: 720px; }
+
+.block-4-wide {
+  width: 100%;
+  max-width: 960px; }
 
 /*******************************
 
@@ -280,7 +289,9 @@ img {
 
 *******************************/
 .site-nav {
-  float: right; }
+  float: right;
+  top: 56px;
+  position: relative; }
 
 .site-nav ul {
   float: right; }
@@ -300,14 +311,14 @@ img {
   font: 16px 'alex_brush', arial, sans-serif;
   display: block; }
 
-[data-content="works"] span {
-  color: #12b25d; }
+[data-content="projects"] span {
+  color: #897c8d; }
 
-[data-content="bio"] span {
-  color: #ff4633; }
+[data-content="resume"] span {
+  color: #cf8a6c; }
 
 [data-content="contact"] span {
-  color: #b21100; }
+  color: #67bfad; }
 
 .social-nav {
   margin: 20px 0; }
@@ -323,18 +334,17 @@ img {
   overflow: hidden;*/ }
 
 .site-content {
-  width: 75%;
-  max-width: 960px;
-  float: left;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   height: 100%;
   padding: 0 0 100px;
   z-index: 1;
   opacity: 1;
   pointer-events: auto; }
 
+/*******************************
+
+  Homepage Styles
+
+*******************************/
 .homepage-intro .title {
   font: 100px 'alex_brush', arial, sans-serif;
   text-align: center; }
@@ -359,6 +369,40 @@ img {
   position: absolute;
   bottom: 0; }
 
+.page-title {
+  font: 40px 'alex_brush', arial, sans-serif;
+  border: solid 2px #cf8a6c;
+  border-style: none none solid;
+  margin: 0; }
+
+/*******************************
+
+  Projects Styles
+
+*******************************/
+.project {
+  height: 150px;
+  background: transparent;
+  transition: 400ms; }
+
+.project:hover {
+  background: rgba(207, 138, 108, 0.5); }
+
+.project-content {
+  border: solid 2px #767676;
+  border-style: none none solid;
+  height: 150px;
+  padding: 0 0 0 5%; }
+
+.project-content > * {
+  float: left;
+  width: 25%; }
+
+/*******************************
+
+  Footer Styles
+
+*******************************/
 .site-footer .block:first-child {
   padding: 0; }
 
@@ -402,7 +446,9 @@ img {
   .menu-btn {
     display: block;
     z-index: 20;
-    position: relative; }
+    position: fixed;
+    right: 20px;
+    top: 56px; }
 
   .site-nav ul {
     max-height: 0;
@@ -422,7 +468,7 @@ img {
     background: rgba(255, 255, 255, 0.8);
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10; }

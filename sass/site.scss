@@ -150,7 +150,7 @@ p:first-child {
 
 .wrapper {
   width: 97.23%;
-  max-width: 960px;
+  max-width: $wrapper-width;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -224,17 +224,26 @@ img {
 .block {
   float: left;
   padding: 0 0 0 20px;
+  position: relative;
 }
-
-.block-2-wide {
-  width: 50%;
-  max-width: 480px;
-}
-
 .block-1-wide {
   width: 25%;
   max-width: 240px;
 }
+.block-2-wide {
+  width: 50%;
+  max-width: 480px;
+}
+.block-3-wide {
+  width: 75%;
+  max-width: 720px;
+}
+.block-4-wide {
+  width: 100%;
+  max-width: $wrapper-width;
+}
+
+
 
 /*******************************
 
@@ -317,6 +326,8 @@ img {
 
 .site-nav {
   float: right;
+  top: 56px;
+  position: relative;
 }
 
 .site-nav ul {
@@ -342,17 +353,17 @@ img {
   display: block;
 }
 
-[data-content="works"] span {
-  color: #12b25d;
+[data-content="projects"] span {
+  color: $purple;
   // color: $green-dark;
 }
 
-[data-content="bio"] span {
-  color: #ff4633;
+[data-content="resume"] span {
+  color: $clay;
 }
 
 [data-content="contact"] span {
-  color: #b21100;
+  color: $melon;
 }
 
 .social-nav {
@@ -372,12 +383,12 @@ img {
 }
 
 .site-content {
-  width: 75%;
-  max-width: 960px;
-  float: left;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  // width: 75%;
+  // max-width: 960px;
+  // float: left;
+  // position: relative;
+  // left: 50%;
+  // transform: translateX(-50%);
   height: 100%;
   padding: 0 0 100px;
   z-index: 1;
@@ -385,6 +396,13 @@ img {
   pointer-events: auto;
 }
 
+
+
+/*******************************
+
+  Homepage Styles
+
+*******************************/
 .homepage-intro .title {
   font: 100px 'alex_brush', arial, sans-serif;
   text-align: center;
@@ -410,6 +428,75 @@ img {
   bottom: 0;
 }
 
+
+.page-title {
+  font:  40px 'alex_brush', arial, sans-serif;
+  border: solid 2px $clay;
+  border-style: none none solid;
+  margin: 0;
+}
+
+/*******************************
+
+  Projects Styles
+
+*******************************/
+
+.projects {
+
+}
+
+.project {
+  height: 150px;
+  background: transparent;
+  transition: 400ms;
+}
+
+.project:hover {
+  background: rgba($clay, 0.5);
+}
+
+.project-content {
+  border: solid 2px $font-color;
+  border-style: none none solid;
+  height: 150px;
+  padding: 0 0 0 5%;
+}
+
+.project-content > * {
+  float:left;
+  width: 25%;
+}
+
+
+// ol.projects {
+//     margin: 0;
+//     padding: 0;
+//     list-style-type: none; // Remove list style
+
+//     > li {
+//       counter-increment: step-counter; // Use step counter
+//       list-style-type: none; // Remove list style, yup, again
+//       padding-left: 9.5%;; // Add space for text alignment for multiple line list items
+//     }
+
+//     > li::before {
+//       content: counter(step-counter) "."; // Add counter and dot as content                                                                    // for each ordered list item
+//       padding: 0;
+//       color: red;
+//       position: absolute; // Remove from DOM flow to allow space for item increment to appear to left of left aligned item text
+//       // margin-left: -30px; // Move increment to the left with same measurement as left padding added to list item
+//   }
+// }
+
+
+
+
+/*******************************
+
+  Footer Styles
+
+*******************************/
 .site-footer {
 
 }
@@ -475,6 +562,7 @@ img {
     z-index: 20;
     position: fixed;
     right: 20px;
+    top: 56px;
   }
 
   .site-nav ul {
