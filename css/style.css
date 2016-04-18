@@ -404,17 +404,12 @@ img {
   font-size: 30px; }
 
 .slanted-divider {
-  -ms-transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
-  transform: translateY(-50%) rotate(10deg);
+  transform: translateY(-50%);
   height: 70%;
-  width: 2px;
-  background: -moz-linear-gradient(top, rgba(118, 118, 118, 0) 0%, #767676 50%, rgba(118, 118, 118, 0) 100%);
-  background: -webkit-linear-gradient(top, rgba(118, 118, 118, 0) 0%, #767676 50%, rgba(118, 118, 118, 0) 100%);
-  background: linear-gradient(to bottom, rgba(118, 118, 118, 0) 0%, #767676 50%, rgba(118, 118, 118, 0) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00767676', endColorstr='#00767676',GradientType=0 );
+  width: 38px;
+  background: url(../img/divider2.svg) 0 0 no-repeat;
   position: absolute;
-  right: 40px;
+  right: 50px;
   transition: 400ms; }
 
 .project-content .proj-title-block .proj-title {
@@ -453,10 +448,6 @@ img {
   .project:hover .project-content {
     padding: 0; }
   .project:hover .slanted-divider {
-    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
-    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=0 );
     right: 80px; }
   .project:hover .lg-copy {
     font-size: 34px; }
@@ -466,9 +457,14 @@ img {
     opacity: 1; }
   .project:hover .cta-btn {
     color: #fff;
-    background: rgba(103, 191, 173, 0.8); }
+    background: rgba(103, 191, 173, 0.8);
+    transition: 400ms; }
+    .project:hover .cta-btn:hover {
+      background: #67bfad; }
     .project:hover .cta-btn:first-child {
       background: rgba(137, 124, 141, 0.8); }
+      .project:hover .cta-btn:first-child:hover {
+        background: #897c8d; }
 
 /*******************************
 
