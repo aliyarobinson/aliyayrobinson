@@ -387,7 +387,7 @@ img {
   // position: relative;
   // left: 50%;
   // transform: translateX(-50%);
-  height: 100%;
+  // height: 100%;
   padding: 0 0 100px;
   z-index: 1;
   opacity: 1;
@@ -930,8 +930,43 @@ img{
   font-weight: 500;
 }
 
+.site-footer .social-item {
+  float: left;
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+
+  a {
+    // display: inline-block;
+  }
+}
+
 .site-footer .social .icon {
-  font: 20px 'fontawesome', sans-serif;
+  font: 30px 'fontawesome', sans-serif;
+  display: inline-block;
+  margin: 10px;
+  transition: 400ms;
+
+  &:hover {
+    color: #999;
+  }
+}
+
+.site-footer .art {
+  .thumb {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background: #000;
+
+    img {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }
 
 #content-holder {
@@ -958,7 +993,19 @@ img{
 
 
 
-
+@media screen and (max-width: 1000px) {
+  .site-footer .favorites .block {
+    width: 100%;
+  }
+  // .site-footer .art .thumb {
+  //     height: 240px;
+  //     width: 240px;
+  // }
+  // .site-footer .art .thumb img {
+  //   left: 50%;
+  //   margin-left: -142px;
+  // }
+}
 
 
 
@@ -968,7 +1015,7 @@ img{
     width: 150px;
     height: 120px;
     position: fixed;
-    top: 60px;
+    top: 20px;
     left: 10px;
   }
 
@@ -977,7 +1024,7 @@ img{
     z-index: 20;
     position: fixed;
     right: 20px;
-    top: 56px;
+    top: 20px;
   }
 
   .site-nav ul {
@@ -1022,6 +1069,45 @@ img{
     position: absolute;
   }
 
+
+  .site-content {
+    margin: -150px 0 0;
+  }
+
+  .homepage-intro .title {
+    font: 60px 'alex_brush', arial, sans-serif;
+  }
+
+  .homepage-intro .subtitle {
+    width: 96%;
+    font-size: 20px;
+  }
+
+  .site-footer .wrapper > .block {
+    width: 100%;
+    max-width: none;
+  }
+
 }
 
+@media screen and (max-width: 500px) {
+  .homepage-intro .title {
+    font: 40px 'alex_brush', arial, sans-serif;
+  }
 
+  .homepage-intro .subtitle {
+    width: 92%;
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .homepage-intro blockquote {
+    font: 26px 'alex_brush', arial, sans-serif;
+    width: 80%;
+  }
+
+  .homepage-intro blockquote cite {
+    font: 100 20px 'work_sans', arial, sans-serif;
+  }
+
+}
