@@ -707,6 +707,11 @@ img {
   Footer Styles
 
 *******************************/
+.site-footer {
+  background: rgba(207, 138, 108, 0.88);
+  padding: 20px 0;
+  color: #fff; }
+
 .site-footer .block:first-child {
   padding: 0; }
 
@@ -832,9 +837,31 @@ img {
     width: 96%;
     font-size: 20px; }
 
+  .project:hover .slanted-divider {
+    opacity: 0; }
+  .project:hover .proj-title-block {
+    opacity: 0; }
+  .project:hover .project-content .cta-block {
+    right: 25%; }
+
+  .project-content > * {
+    width: 50%; }
+
+  .proj-tools-block,
+  .proj-year-block {
+    display: none; }
+
+  .cta-btn {
+    width: 100%; }
+
   .site-footer .wrapper > .block {
     width: 100%;
-    max-width: none; } }
+    max-width: none;
+    padding: 0;
+    margin: 0 0 40px; }
+
+  .site-footer .favorites .block {
+    height: auto; } }
 @media screen and (max-width: 500px) {
   .homepage-intro .title {
     font: 40px 'alex_brush', arial, sans-serif; }

@@ -900,7 +900,9 @@ img{
 
 *******************************/
 .site-footer {
-
+  background: rgba(207, 138, 108, 0.88);
+  padding: 20px 0;
+  color: #fff;
 }
 
 .site-footer .block:first-child {
@@ -1083,9 +1085,52 @@ img{
     font-size: 20px;
   }
 
+  .project:hover {
+
+    .slanted-divider{
+      opacity: 0;
+    }
+    .proj-title-block {
+      // left: -40px;
+      opacity: 0;
+    }
+
+    .project-content .cta-block {
+      right: 25%;
+    }
+  }
+
+  // .project {
+  //   .proj-title-block {
+  //     transition: 400ms;
+  //     &:hover {
+  //       left: -40px;
+  //     }
+  //   }
+  // }
+  // 
+  .project-content > * {
+    width: 50%;
+  }
+
+  .proj-tools-block,
+  .proj-year-block {
+    display: none;
+  }
+
+  .cta-btn {
+    width: 100%;
+  }
+
   .site-footer .wrapper > .block {
     width: 100%;
     max-width: none;
+    padding: 0;
+    margin: 0 0 40px;
+  }
+
+  .site-footer .favorites .block {
+    height: auto;
   }
 
 }
