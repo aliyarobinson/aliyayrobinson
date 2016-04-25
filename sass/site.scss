@@ -166,12 +166,25 @@ button {
   padding: 0;
   background: transparent;
   cursor: pointer;
+  background: rgba(255,255,255, 0.5);
+  margin: 0 0 0 20px;
+
+  &:first-child {
+    margin:0;
+  }
 }
 
 
 img {
   width: 100%;
   height: auto;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding: 5px 0;
 }
 
 .legal{
@@ -663,6 +676,21 @@ img {
 // }
 
 
+
+.single-project {
+  .detail-block-title, 
+  .title-copy {
+    font: 22px 'alex_brush', arial, sans-serif;
+  }
+
+  .detail-block-title {
+    border: 2px solid #333;
+    border-style: none none solid;
+    margin: 20px 0 0;
+  }
+
+}
+
 /********************************/
 /*         Resume Page        */
 /********************************/
@@ -838,85 +866,85 @@ img{
   margin-right:20px
 }
 
-.experience-mod .projects{
-    margin:20px 0;
-}
+// .experience-mod .projects{
+//     margin:20px 0;
+// }
 
-.experience-mod .projects .icon-wrapper{
-    width: 100%;
-    min-width: 50px;
-    overflow: hidden;
-    display: inline-block;
-    margin-left:5%;
-    position:relative;
-}
+// .experience-mod .projects .icon-wrapper{
+//     width: 100%;
+//     min-width: 50px;
+//     overflow: hidden;
+//     display: inline-block;
+//     margin-left:5%;
+//     position:relative;
+// }
 
 
-.experience-mod .projects .icon-wrapper .icon{
-    width: 90%;
-    display: inline-block;
-    margin-left: 5%;
-    margin-top: 5%;
-}
+// .experience-mod .projects .icon-wrapper .icon{
+//     width: 90%;
+//     display: inline-block;
+//     margin-left: 5%;
+//     margin-top: 5%;
+// }
 
-.experience-mod .projects .icon .info{
-    position:absolute;
-    background:rgba(0,0,0,0.3);
-    width:100%;
-    height: 100%;
-    top: 0;
-    z-index:2;
-    line-height: 280%;
-    text-align:center;
-}
+// .experience-mod .projects .icon .info{
+//     position:absolute;
+//     background:rgba(0,0,0,0.3);
+//     width:100%;
+//     height: 100%;
+//     top: 0;
+//     z-index:2;
+//     line-height: 280%;
+//     text-align:center;
+// }
 
-.experience-mod .projects .icon-wrapper .info {
-    width: 100%;
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    text-align: center;
-    text-decoration: none;
-}
+// .experience-mod .projects .icon-wrapper .info {
+//     width: 100%;
+//     display: inline-block;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     text-align: center;
+//     text-decoration: none;
+// }
 
-.experience-mod .projects .icon-wrapper .info span{
-    border: white solid 2px;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    border-radius: 50%;
-    line-height: 48px;
-    font-size: 40px;
-    color: white;
-}
+// .experience-mod .projects .icon-wrapper .info span{
+//     border: white solid 2px;
+//     width: 40px;
+//     height: 40px;
+//     display: inline-block;
+//     border-radius: 50%;
+//     line-height: 48px;
+//     font-size: 40px;
+//     color: white;
+// }
 
-.experience-mod .projects .icon .info span{
-    color: white;
-    font-size: 120%;
-    font-weight: bolder;
-    border: solid 2px white;
-    width: 100px;
-    padding: 5% 13%;
-    border-radius: 50%;
-}
+// .experience-mod .projects .icon .info span{
+//     color: white;
+//     font-size: 120%;
+//     font-weight: bolder;
+//     border: solid 2px white;
+//     width: 100px;
+//     padding: 5% 13%;
+//     border-radius: 50%;
+// }
 
-.experience-mod .projects .icon-wrapper:first-child{
-    margin-left:0%;
-}
+// .experience-mod .projects .icon-wrapper:first-child{
+//     margin-left:0%;
+// }
 
-.experience-mod .projects .icon-wrapper.mry-blog {
-    max-width: 120px;
-}
+// .experience-mod .projects .icon-wrapper.mry-blog {
+//     max-width: 120px;
+// }
 
-.experience-mod .projects .icon-wrapper.neutrogena {
-    max-width: 170px;
-}
+// .experience-mod .projects .icon-wrapper.neutrogena {
+//     max-width: 170px;
+// }
 
-.experience-mod .projects .icon-wrapper.mryouth {
-    max-width: 130px;
-}
+// .experience-mod .projects .icon-wrapper.mryouth {
+//     max-width: 130px;
+// }
 
 .experience-mod  .position-title{
     position:relative;
@@ -936,20 +964,22 @@ img{
     top:0;
 }
 
-.skills .pie-chart{
-    width:46%;
-    margin:2%;
-    float:left;
-    height: 200px;
-    text-align: center;
-    position:relative;
+.experience-mod .title-name {
+  font-style: italic;
 }
 
-.skills .pie-chart h4{
-    position: absolute;
-    top: 70px;
-    left: 55px;
-    z-index: 90;
+.experience-mod .company {
+  font-weight: 800;
+}
+
+.skills {
+
+  .skill {
+    float: left;
+    margin: 0 0 0 5px;
+    height: 30px;
+  }
+
 }
 
 /*******************************

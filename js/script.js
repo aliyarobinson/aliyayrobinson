@@ -86,7 +86,7 @@ var AYR = AYR || {};
     },
     transitionContent: function(page){
         console.log('*****************transitionContent*********************');
-
+        AYR.currPageName = page;
         console.log('transitionContent - name: ', AYR.currPageName);
         // AYR.imagesLoaded();
         // if (AYR.imagesLoaded){
@@ -97,8 +97,17 @@ var AYR = AYR || {};
         // }
         // $('.content-container').hide(600);
         $('.content-container').addClass('collapsed');
-        $( "#content-holder" ).load( page + ".html .content-wrapper" );
+        $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
+          console.log('page name after content load: ', AYR.currPageName);
+          if(AYR.currPageName === "resume"){
+            d3.selectAll(".skill")
+            .data([11, 11, 6, 5, 2, 1])
+            .transition(500)
+            .style("font-size", function(d) { return d * 3  + "px"; });
+          }
+        } );
 
+        
         // $('body').attr('class', '').addClass(page + '-page');
 
         // $('#content-holder').animate({
@@ -134,7 +143,23 @@ var AYR = AYR || {};
       /**************************************/
       /*   History.popstate
       /***************************************************/
-      // window.onload = window.onpopstate = function (e) {
+      window.onload = window.onpopstate = function (e) {
+        var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
+        var thisPageName = thisPage.replace('.html','');
+        if(thisPageName === "resume"){
+          var skillsArr = [];
+          $( ".skill" ).each(function( index ) {
+            console.log( index + ": " + $( this ).data('rating') );
+            skillsArr.push($( this ).data('rating'));
+          });
+          d3.selectAll(".skill")
+          // .data([11, 11, 6, 5, 2, 1])
+          .data(skillsArr)
+          .style("font-size", "12px")
+          .transition(500)
+          .style("font-size", function(d) { return d * 2.5  + "px"; });
+        }
+      }
       window.onpopstate = function (e) {
         console.log('*****************onpopstate/onload triggered*********************');
         var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
