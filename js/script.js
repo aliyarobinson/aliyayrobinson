@@ -22,6 +22,12 @@ var AYR = AYR || {};
         return $(window).width() < maxWidth || iPadDevice ? !0 : !1
     },
 
+    scrollTop: function(e){
+      $('html,body').animate({                                                             
+        scrollTop: $('html,body').offset().top
+      }, 500);
+    },
+
     init: function () {
       console.log('init');
 
@@ -98,7 +104,7 @@ var AYR = AYR || {};
       /**************************************/
       /*   Navigation link click
       /***************************************************/
-      $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a', function(e) { 
+      $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a, .project .cta-btn, .btn.back', function(e) { 
         e.preventDefault();
         // e.stopPropagation();
         e.stopImmediatePropagation();
@@ -114,7 +120,8 @@ var AYR = AYR || {};
           }
           console.log('nav click - thisPage: ', thisPage); 
           history.pushState(null, null, href);
-          AYR.pageState[thisPage]();
+          // AYR.pageState[thisPage]();
+          AYR.pageState.innerPage(thisPage);
 
         }
       });
@@ -180,28 +187,36 @@ var AYR = AYR || {};
           page = 'home';
         }
         console.log('pageContent notified - page: ', page);
-        AYR.pageState[page]();
+        // AYR.pageState[page]();
+        AYR.pageState.innerPage(page);
       },
-      home: function() {
-        console.log('home state notified');
-        document.querySelector('body').classList.add('home-page');
-        AYR.transitionContent('index');
-        AYR.homeAnim();
-      },
-      projects: function() {
-        console.log('projects state notified');
-        document.querySelector('body').classList.add('projects-page');
-        AYR.transitionContent('projects');
-      },
-      resume: function() {
-        console.log('resume state notified');
-        document.querySelector('body').classList.add('resume-page');
-        AYR.transitionContent('resume');
-      },
-      contact: function() {
-        console.log('contact state notified');
-        document.querySelector('body').classList.add('contact-page');
-        AYR.transitionContent('contact');
+      // home: function() {
+      //   console.log('home state notified');
+      //   document.querySelector('body').classList.add('home-page');
+      //   AYR.transitionContent('index');
+      //   AYR.homeAnim();
+      // },
+      // projects: function() {
+      //   console.log('projects state notified');
+      //   document.querySelector('body').classList.add('projects-page');
+      //   AYR.transitionContent('projects');
+      // },
+      // resume: function() {
+      //   console.log('resume state notified');
+      //   document.querySelector('body').classList.add('resume-page');
+      //   AYR.transitionContent('resume');
+      // },
+      // contact: function() {
+      //   console.log('contact state notified');
+      //   document.querySelector('body').classList.add('contact-page');
+      //   AYR.transitionContent('contact');
+      // },
+      innerPage: function(pName){
+        document.querySelector('body').classList.add( pName + '-page');
+        AYR.transitionContent(pName);
+        if(pName === "home"){
+          AYR.homeAnim();
+        }
       }
     },
 
@@ -247,6 +262,7 @@ var AYR = AYR || {};
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
         }
+        AYR.scrollTop();
       });
     }
   };
