@@ -85,57 +85,45 @@ var AYR = AYR || {};
       }
     },
     growSkills: function() {
-      // if(AYR.currPageName === "resume"){
-        var skillsArr = [];
-        $( ".skill" ).each(function( index ) {
-          console.log( index + ": " + $( this ).data('rating') );
-          skillsArr.push($( this ).data('rating'));
-        });
-        d3.selectAll(".skill")
-        .data(skillsArr)
-        .style("font-size", "0px")
-        .transition(5000)
-        .delay(function(d, i) {
-            return i * 100;
-        })
-        .style("font-size", function(d) { return d * 2.5  + "px"; });
-      // }
+      var skillsArr = [];
+      $( ".skill" ).each(function( index ) {
+        console.log( index + ": " + $( this ).data('rating') );
+        skillsArr.push($( this ).data('rating'));
+      });
+      d3.selectAll(".skill")
+      .data(skillsArr)
+      .style("font-size", "0px")
+      .transition(5000)
+      .delay(function(d, i) {
+          return i * 100;
+      })
+      .style("font-size", function(d) { return d * 2.5  + "px"; });
     },
     updateCurrPage: function() {
       var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
       AYR.currPageName = thisPageName = thisPage.replace('.html','');
     },
     transitionContent: function(page){
-        console.log('*****************transitionContent*********************');
-        AYR.updateCurrPage();
-        AYR.currPageName = page;
-        console.log('transitionContent - name: ', AYR.currPageName);
-        // AYR.imagesLoaded();
-        // if (AYR.imagesLoaded){
-        //   if(page === 'index'){
-        //     // $('.loader').addClass('collapsed');
-        //     AYR.homeAnim();
-        //   }
-        // }
-        // $('.content-container').hide(600);
-        $('.content-container').addClass('collapsed');
-        $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
-          console.log('page name after content load: ', AYR.currPageName);
-          if(AYR.currPageName === "resume"){
-            AYR.growSkills();
-            // d3.selectAll(".skill")
-            // .data([11, 11, 6, 5, 2, 1])
-            // .transition(500)
-            // .style("font-size", function(d) { return d * 3  + "px"; });
-          }
-        } );
+      console.log('*****************transitionContent*********************');
+      AYR.updateCurrPage();
+      AYR.currPageName = page;
+      console.log('transitionContent - name: ', AYR.currPageName);
+      // AYR.imagesLoaded();
+      // if (AYR.imagesLoaded){
+      //   if(page === 'index'){
+      //     // $('.loader').addClass('collapsed');
+      //     AYR.homeAnim();
+      //   }
+      // }
+      // $('.content-container').hide(600);
+      $('.content-container').addClass('collapsed');
+      $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
+        console.log('page name after content load: ', AYR.currPageName);
+        if(AYR.currPageName === "resume"){
+          AYR.growSkills();
+        }
+      });
 
-        
-        // $('body').attr('class', '').addClass(page + '-page');
-
-        // $('#content-holder').animate({
-        //   opacity: 1
-        // },600);
     },
     init: function () {
       console.log('init');
@@ -167,30 +155,13 @@ var AYR = AYR || {};
       /*   History.popstate
       /***************************************************/
       window.onload = window.onpopstate = function (e) {
-        // var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
-        // var thisPageName = thisPage.replace('.html','');
         AYR.updateCurrPage();
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
-          // var skillsArr = [];
-          // $( ".skill" ).each(function( index ) {
-          //   console.log( index + ": " + $( this ).data('rating') );
-          //   skillsArr.push($( this ).data('rating'));
-          // });
-          // d3.selectAll(".skill")
-          // // .data([11, 11, 6, 5, 2, 1])
-          // .data(skillsArr)
-          // .style("font-size", "12px")
-          // .transition(500)
-          // .style("font-size", function(d) { return d * 2.5  + "px"; });
         }
       }
       window.onpopstate = function (e) {
         console.log('*****************onpopstate/onload triggered*********************');
-        // var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
-        // var thisPageName = thisPage.replace('.html','');
-        // console.log('thisPageName: ', thisPageName); 
-        // AYR.pageLocation.notifyObservers(thisPageName);
         AYR.updateCurrPage();
         console.log('thisPageName: ', AYR.currPageName); 
         AYR.pageLocation.notifyObservers(AYR.currPageName);
