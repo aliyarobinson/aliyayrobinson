@@ -367,6 +367,14 @@ img {
 .site-nav li {
   float: left;
   margin: 0 0 0 20px;
+  border: 2px solid transparent;
+  border-style: none none solid;
+  transition: 300ms;
+
+  &:hover {
+    border: 2px solid rgba(0,0,0,0.8);
+    border-style: none none solid;
+  }
 }
 
 .site-nav li:first-child {
@@ -445,20 +453,25 @@ img {
   border: 1px rgba(137, 124, 141, 0.5);
   border-style: none none solid;
 
+  .site-nav ul {
+    position: relative;
+    top: 12px;
+  }
+
   .logo-wrapper {
     width: 100px;
     height: 60px;
 
-  a {
-    display: inline-block;
-    height: 100%;
+    a {
+      display: inline-block;
+      height: 100%;
 
-    img {
-      position: relative;
-      top: 4px;
+      img {
+        position: relative;
+        top: 4px;
+      }
     }
   }
-}
 
   .site-nav {
     top: 4px;
@@ -1229,18 +1242,18 @@ img{
 
     li {
       margin: 0 0 30px;
-      border: 2px solid transparent;
-      border-style: none none solid;
-      transition: 300ms;
+      // border: 2px solid transparent;
+      // border-style: none none solid;
+      // transition: 300ms;
 
       &:first-child {
         margin: 0 0 30px;
       }
 
-      &:hover {
-        border: 2px solid rgba(0,0,0,0.8);
-        border-style: none none solid;
-      }
+      // &:hover {
+      //   border: 2px solid rgba(0,0,0,0.8);
+      //   border-style: none none solid;
+      // }
     }
 
     li a span {

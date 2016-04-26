@@ -317,7 +317,13 @@ img {
 
 .site-nav li {
   float: left;
-  margin: 0 0 0 20px; }
+  margin: 0 0 0 20px;
+  border: 2px solid transparent;
+  border-style: none none solid;
+  transition: 300ms; }
+  .site-nav li:hover {
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    border-style: none none solid; }
 
 .site-nav li:first-child {
   margin: 0; }
@@ -366,6 +372,9 @@ img {
   margin: 0;
   border: 1px rgba(137, 124, 141, 0.5);
   border-style: none none solid; }
+  .site-header.small .site-nav ul {
+    position: relative;
+    top: 12px; }
   .site-header.small .logo-wrapper {
     width: 100px;
     height: 60px; }
@@ -847,15 +856,9 @@ img {
     left: 0;
     z-index: 10; }
     .site-nav.active li {
-      margin: 0 0 30px;
-      border: 2px solid transparent;
-      border-style: none none solid;
-      transition: 300ms; }
+      margin: 0 0 30px; }
       .site-nav.active li:first-child {
         margin: 0 0 30px; }
-      .site-nav.active li:hover {
-        border: 2px solid rgba(0, 0, 0, 0.8);
-        border-style: none none solid; }
     .site-nav.active li a span {
       display: inline;
       margin: 0 10px 0 0; }
