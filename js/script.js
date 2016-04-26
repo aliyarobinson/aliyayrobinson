@@ -14,6 +14,11 @@ var AYR = AYR || {};
         return true;
       }
     },
+    isMobile: function(){
+        var maxWidth = 768
+          , iPadDevice = null != navigator.userAgent.match(/iPad/i);
+        return $(window).width() < maxWidth || iPadDevice ? !0 : !1
+    },
     homeAnim: function() {
       /**************************************/
       /*   Home Intro Image Animation
@@ -117,6 +122,8 @@ var AYR = AYR || {};
       // }
       // $('.content-container').hide(600);
       $('.content-container').addClass('collapsed');
+      $('.content-wrapper').hide();
+      $('#content-holder').innerHTML = "";
       $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
         console.log('page name after content load: ', AYR.currPageName);
         if(AYR.currPageName === "resume"){
@@ -144,11 +151,14 @@ var AYR = AYR || {};
         
         var yPos = -($(window).scrollTop()); 
 
-        if(yPos <= -100 ){
+        if(isMobile() === false) {
+          if(yPos <= -100 ){
           $('.site-header').addClass('small');
-        }else{
-          $('.site-header').removeClass('small');
+          }else{
+            $('.site-header').removeClass('small');
+          }
         }
+        
       });
 
       /**************************************/
@@ -159,6 +169,11 @@ var AYR = AYR || {};
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
         }
+
+        if(isMobile() === true) {
+          $('.site-header').addClass('small');
+        }
+
       }
       window.onpopstate = function (e) {
         console.log('*****************onpopstate/onload triggered*********************');
