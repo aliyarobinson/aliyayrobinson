@@ -118,9 +118,9 @@ var AYR = AYR || {};
 
           var href = ($(this).attr('href')) ? $(this).attr('href') : $(this).attr('xlink:href');
           var thisPage = href.replace('.html','');
-          if(AYR.isHome(thisPage)){
-            thisPage = 'home';
-          }
+          // if(AYR.isHome(thisPage)){
+          //   thisPage = 'home';
+          // }
           console.log('nav click - thisPage: ', thisPage); 
           history.pushState(null, null, href);
           // AYR.pageState[thisPage]();
