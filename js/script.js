@@ -68,6 +68,7 @@ var AYR = AYR || {};
       /*   Window Load
       /***************************************************/
       window.onload = window.onpopstate = function (e) {
+        AYR.scrollTop();
         AYR.updateCurrPage();
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
@@ -85,7 +86,9 @@ var AYR = AYR || {};
       /*   Window Resize
       /***************************************************/
       $( window ).resize(function() {
-        $( "#log" ).append( "<div>Handler for .resize() called.</div>" );
+        if(AYR.isMobile()) {
+          $('.site-header').removeClass('small');
+        }
       });
 
 
