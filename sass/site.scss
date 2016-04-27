@@ -708,6 +708,7 @@ img {
 
 }
 
+
 /********************************/
 /*         Resume Page        */
 /********************************/
@@ -967,6 +968,7 @@ img{
 //     max-width: 130px;
 // }
 
+
 .experience-mod  .position-title{
     position:relative;
     padding-bottom: 20px;
@@ -1043,7 +1045,7 @@ img{
   .cta-block {
     margin: 20px 0 0;
   }
-  
+
 }
 
 /*******************************
@@ -1188,10 +1190,6 @@ img{
   }
 
   .menu-btn {
-    display: block;
-    z-index: 20;
-    position: fixed;
-    right: 20px;
     top: 14px;
   }
 
@@ -1229,6 +1227,11 @@ img{
     height: 120px;
     background: rgba(255,255,255, 0);
     border: 1px rgba(155, 155, 155, 0) solid;
+    .site-nav li a span {
+      // font: 24px 'alex_brush', arial, sans-serif;
+      // display: inline;
+      // padding: 0 10px 0 0;
+    }
   }
 
   .site-nav.active {

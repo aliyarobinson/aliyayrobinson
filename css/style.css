@@ -816,10 +816,6 @@ img {
     z-index: 20; }
 
   .menu-btn {
-    display: block;
-    z-index: 20;
-    position: fixed;
-    right: 20px;
     top: 14px; }
 
   .site-header {
