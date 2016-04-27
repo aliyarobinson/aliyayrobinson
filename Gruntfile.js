@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			task: {
-				src: ['js/jquery_2_2.js', 'js/script.js'], 
+				src: ['js/jquery_2_2.js', 'js/d3.js', 'js/script.js'], 
 				dest: 'js/bundle.js'
 			},
 			options: {
