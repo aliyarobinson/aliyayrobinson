@@ -358,6 +358,7 @@ img {
   float: right;
   top: 56px;
   position: relative;
+  height:auto;
 }
 
 .site-nav ul {
@@ -1277,7 +1278,7 @@ img{
 
 
   .site-content {
-    // margin: -150px 0 0;
+    margin: 180px 0 0;
   }
 
   .homepage-intro .title {
@@ -1287,6 +1288,13 @@ img{
   .homepage-intro .subtitle {
     width: 96%;
     font-size: 20px;
+  }
+
+  .resume {
+    .block {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   .project:hover {

@@ -260,11 +260,19 @@ var AYR = AYR || {};
       $('.content-container').addClass('collapsed');
       $('.content-wrapper').hide();
       $('#content-holder').innerHTML = "";
+      if($('.site-nav').hasClass('active')){
+        $('.site-nav').removeClass('active');
+        $('.menu-btn').removeClass('active');
+      }
       $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
         console.log('page name after content load: ', AYR.currPageName);
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
         }
+        // if($('.site-nav').hasClass('active')){
+        //   $('.site-nav').removeClass('active');
+        //   $('.menu-btn').removeClass('active');
+        // }
         AYR.scrollTop();
       });
     }

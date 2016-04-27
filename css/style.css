@@ -310,7 +310,8 @@ img {
 .site-nav {
   float: right;
   top: 56px;
-  position: relative; }
+  position: relative;
+  height: auto; }
 
 .site-nav ul {
   float: right; }
@@ -875,12 +876,19 @@ img {
     min-width: 260px;
     text-align: center; }
 
+  .site-content {
+    margin: 180px 0 0; }
+
   .homepage-intro .title {
     font: 60px 'alex_brush', arial, sans-serif; }
 
   .homepage-intro .subtitle {
     width: 96%;
     font-size: 20px; }
+
+  .resume .block {
+    width: 100%;
+    max-width: none; }
 
   .project:hover .slanted-divider {
     opacity: 0; }
