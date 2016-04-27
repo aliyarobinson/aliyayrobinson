@@ -31,7 +31,6 @@ var AYR = AYR || {};
     init: function () {
       console.log('init');
 
-      AYR.menuBtn.registerObserver(AYR.siteNav);
       AYR.pageLocation.registerObserver(AYR.pageState);
 
       var $loading = $('.loader').hide();
@@ -73,13 +72,7 @@ var AYR = AYR || {};
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
         }
-
-        // if(isMobile() === true) {
-        //   $('.site-header').addClass('small');
-        // }
-
       }
-
 
 
       /**************************************/
@@ -109,8 +102,7 @@ var AYR = AYR || {};
       /***************************************************/
       $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a, .project .cta-btn, .btn.back', function(e) { 
         e.preventDefault();
-        // e.stopPropagation();
-        e.stopImmediatePropagation();
+        // e.stopImmediatePropagation();
         console.log('*****************nav click*********************');
 
         if( History ) {
@@ -118,12 +110,8 @@ var AYR = AYR || {};
 
           var href = ($(this).attr('href')) ? $(this).attr('href') : $(this).attr('xlink:href');
           var thisPage = href.replace('.html','');
-          // if(AYR.isHome(thisPage)){
-          //   thisPage = 'home';
-          // }
           console.log('nav click - thisPage: ', thisPage); 
           history.pushState(null, null, href);
-          // AYR.pageState[thisPage]();
           AYR.pageState.innerPage(thisPage);
 
         }
@@ -142,32 +130,6 @@ var AYR = AYR || {};
     },
 
     homeAnim: function() {
-      /**************************************/
-      /*   Home Intro Image Animation
-      /***************************************************/
-    },
-
-    menuBtn: {
-        observers: [],
-        registerObserver: function(observer){
-          this.observers.push(observer);
-        },
-        notifyObservers: function(){
-          for(var i = 0; i < this.observers.length; i++) {
-            this.observers[i].notify();
-          }
-        }
-    },
-
-    siteNav: {
-      notify: function() {
-        console.log('site nav notified');
-        if($('.site-nav').hasClass('expanded')){
-          AYR.siteNav['slideOut']();
-        } else {
-          AYR.siteNav['slideIn']();
-        }
-      }
     },
 
     pageLocation: {
@@ -186,34 +148,9 @@ var AYR = AYR || {};
     pageState: {
       notify: function(page) {
         console.log('page nofify - ishome: ', AYR.isHome(page));
-        // if(AYR.isHome(page)){
-        //   page = 'home';
-        // }
         console.log('pageContent notified - page: ', page);
-        // AYR.pageState[page]();
         AYR.pageState.innerPage(page);
       },
-      // home: function() {
-      //   console.log('home state notified');
-      //   document.querySelector('body').classList.add('home-page');
-      //   AYR.transitionContent('index');
-      //   AYR.homeAnim();
-      // },
-      // projects: function() {
-      //   console.log('projects state notified');
-      //   document.querySelector('body').classList.add('projects-page');
-      //   AYR.transitionContent('projects');
-      // },
-      // resume: function() {
-      //   console.log('resume state notified');
-      //   document.querySelector('body').classList.add('resume-page');
-      //   AYR.transitionContent('resume');
-      // },
-      // contact: function() {
-      //   console.log('contact state notified');
-      //   document.querySelector('body').classList.add('contact-page');
-      //   AYR.transitionContent('contact');
-      // },
       innerPage: function(pName){
         document.querySelector('body').classList.add( pName + '-page');
         AYR.transitionContent(pName);
@@ -249,14 +186,6 @@ var AYR = AYR || {};
       AYR.updateCurrPage();
       AYR.currPageName = page;
       console.log('transitionContent - name: ', AYR.currPageName);
-      // AYR.imagesLoaded();
-      // if (AYR.imagesLoaded){
-      //   if(page === 'index'){
-      //     // $('.loader').addClass('collapsed');
-      //     AYR.homeAnim();
-      //   }
-      // }
-      // $('.content-container').hide(600);
       $('.content-container').addClass('collapsed');
       $('.content-wrapper').hide();
       $('#content-holder').innerHTML = "";
@@ -264,15 +193,16 @@ var AYR = AYR || {};
         $('.site-nav').removeClass('active');
         $('.menu-btn').removeClass('active');
       }
+
+      if($('.site-header').hasClass('mobile-active')){
+        $('.site-header').removeClass('mobile-active');
+      }
+
       $( "#content-holder" ).load( page + ".html .content-wrapper", function(){
         console.log('page name after content load: ', AYR.currPageName);
         if(AYR.currPageName === "resume"){
           AYR.growSkills();
         }
-        // if($('.site-nav').hasClass('active')){
-        //   $('.site-nav').removeClass('active');
-        //   $('.menu-btn').removeClass('active');
-        // }
         AYR.scrollTop();
       });
     }

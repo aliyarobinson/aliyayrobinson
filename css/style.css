@@ -183,6 +183,22 @@ img {
   display: block;
   height: 0; }
 
+.dont-break-out {
+  /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
 /*.responsive-embed {
     position:relative;
     padding-bottom:56.25%;
@@ -425,7 +441,7 @@ img {
   font: 40px 'alex_brush', arial, sans-serif;
   border: solid 2px #cf8a6c;
   border-style: none none solid;
-  margin: 0; }
+  margin: 0 0 20px; }
 
 /*******************************
 
@@ -639,7 +655,8 @@ img {
   padding: 30px 0 0;
   margin: 0 0 20px;
   width: 95%;
-  opacity: 1; }
+  opacity: 1;
+  position: relative; }
 
 .experiment-mod:first-child {
   padding-top: 30px; }
@@ -684,7 +701,7 @@ img {
 .experience-mod .date {
   position: absolute;
   right: 0;
-  top: 0; }
+  top: 30px; }
 
 .experience-mod .title-name {
   font-style: italic; }
@@ -700,8 +717,6 @@ img {
   padding: 5px;
   background: rgba(133, 133, 133, 0.83);
   color: #fff; }
-.resume .skills {
-  padding: 0; }
 .resume .skill {
   float: left;
   margin: 0 0 0 5px;
@@ -808,6 +823,15 @@ img {
   .site-footer .favorites .block {
     width: 100%; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1), (max-width: 768px) {
+  .block-1-wide {
+    width: 50%;
+    max-width: none;
+    min-height: 100px; }
+
+  .block-3-wide {
+    width: 100%;
+    max-width: none; }
+
   .logo-wrapper {
     width: 150px;
     height: 120px;
@@ -915,6 +939,26 @@ img {
 
   .site-footer .favorites .block {
     height: auto; } }
+@media screen and (max-width: 650px) {
+  .block-1-wide,
+  .block-2-wide,
+  .block-3-wide,
+  .block-4-wide {
+    width: 100%;
+    max-width: none; }
+
+  .experience-mod .position-title {
+    padding-bottom: 0px; }
+
+  .experience-mod .date {
+    position: relative;
+    right: 0;
+    top: 0;
+    float: none;
+    text-align: left; }
+
+  .experience-mod .position-desc {
+    padding: 10px 0 0; } }
 @media screen and (max-width: 500px) {
   .homepage-intro .title {
     font: 40px 'alex_brush', arial, sans-serif; }
