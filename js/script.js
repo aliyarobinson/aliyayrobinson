@@ -33,13 +33,16 @@ var AYR = AYR || {};
 
       AYR.pageLocation.registerObserver(AYR.pageState);
 
-      var $loading = $('.loader').hide();
+      // var $loading = $('.loader').hide();
+      var $loading = $('.loader');
       $(document)
         .ajaxStart(function () {
-          $loading.show();
+          // $loading.show();
+          $loading.removeClass('collapsed');
         })
         .ajaxStop(function () {
-          $loading.hide();
+          // $loading.hide();
+          $loading.addClass('collapsed');
         });
           
 
