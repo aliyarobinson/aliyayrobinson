@@ -94,6 +94,20 @@ table {
    p {
      font-weight: 800;
    }*/ }
+strong {
+  font-weight: bold;
+  font-size: 22px;
+  color: #000; }
+
+p {
+  margin: 20px 0;
+  line-height: 28px;
+  letter-spacing: 0.26px;
+  font-size: 16px; }
+
+p:first-child {
+  margin-top: 0; }
+
 /*******************************
 
   General Styles
@@ -119,20 +133,6 @@ body {
 *:after,
 *:before {
   box-sizing: border-box; }
-
-strong {
-  font-weight: bold;
-  font-size: 22px;
-  color: #000; }
-
-p {
-  margin: 20px 0;
-  line-height: 28px;
-  letter-spacing: 0.26px;
-  font-size: 16px; }
-
-p:first-child {
-  margin-top: 0; }
 
 /**:empty{
   display: none;
