@@ -724,6 +724,11 @@ img {
   line-height: 30px;
   font-size: 0px; }
 
+/*******************************
+
+  Single Project Styles
+
+*******************************/
 .single-project .btn {
   padding: 5px;
   background: rgba(133, 133, 133, 0.9);
@@ -738,8 +743,13 @@ img {
 .single-project .cta-block {
   margin: 20px 0 0; }
 
-.contact .contact-list {
-  margin: 20px 0 0; }
+/*******************************
+
+  Contact Styles
+
+*******************************/
+.contact-list {
+  margin: 20px auto; }
 
 /*******************************
 
