@@ -429,10 +429,11 @@ img {
   margin: 60px auto 0;
   padding: 0 0 34px;
   width: 93.75%;
-  max-width: 960px; }
+  max-width: 960px;
+  position: relative; }
 
 .homepage-intro blockquote cite {
-  left: 10%;
+  left: 0;
   font: 100 22px 'work_sans', arial, sans-serif;
   position: absolute;
   bottom: 0; }
@@ -440,8 +441,7 @@ img {
 .page-title {
   font: 40px 'alex_brush', arial, sans-serif;
   border: solid 2px #cf8a6c;
-  border-style: none none solid;
-  margin: 0 0 20px; }
+  border-style: none none solid; }
 
 /*******************************
 
@@ -738,6 +738,9 @@ img {
 .single-project .cta-block {
   margin: 20px 0 0; }
 
+.contact .contact-list {
+  margin: 20px 0 0; }
+
 /*******************************
 
   Footer Styles
@@ -1027,7 +1030,12 @@ img {
 
 @media screen and (max-width: 1024px) {
   .site-footer .favorites .block {
-    width: 100%; } }
+    width: 100%; }
+
+  .project-content > * {
+    width: 30%; }
+  .project-content .proj-year-block {
+    display: none; } }
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1), (max-width: 768px) {
   .block-1-wide {
     width: 50%;
@@ -1120,22 +1128,23 @@ img {
     width: 100%;
     max-width: none; }
 
-  .project:hover .slanted-divider {
-    opacity: 0; }
-  .project:hover .proj-title-block {
+  .project .slanted-divider {
+    right: 70px; }
+  .project:hover .slanted-divider,
+  .project:hover .proj-title-block,
+  .project:hover .proj-tools-block {
     opacity: 0; }
   .project:hover .project-content .cta-block {
     right: 25%; }
 
-  .project-content > * {
-    width: 50%; }
-
-  .proj-tools-block,
   .proj-year-block {
     display: none; }
 
   .cta-btn {
     width: 100%; }
+
+  .project-content > * {
+    width: 30%; }
 
   .site-footer .wrapper > .block {
     width: 100%;
@@ -1153,6 +1162,12 @@ img {
     width: 100%;
     max-width: none; }
 
+  .project-content > * {
+    width: 50%; }
+  .project-content .proj-year-block,
+  .project-content .proj-tools-block {
+    opacity: 0; }
+
   .experience-mod .position-title {
     padding-bottom: 0px; }
 
@@ -1167,18 +1182,20 @@ img {
     padding: 10px 0 0; } }
 @media screen and (max-width: 500px) {
   .homepage-intro .title {
-    font: 40px 'alex_brush', arial, sans-serif; }
+    font: 60px/1em 'alex_brush', arial, sans-serif; }
 
   .homepage-intro .subtitle {
-    width: 92%;
+    width: 93%;
     font-size: 16px;
-    margin: 0; }
+    margin: 0;
+    text-align: center;
+    margin: 0 auto; }
 
   .homepage-intro blockquote {
     font: 26px 'alex_brush', arial, sans-serif;
     width: 80%; }
 
   .homepage-intro blockquote cite {
-    font: 100 20px 'work_sans', arial, sans-serif; } }
+    font: 100 16px 'work_sans', arial, sans-serif; } }
 
 /*# sourceMappingURL=style.css.map */
