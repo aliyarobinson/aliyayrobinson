@@ -55,3 +55,14 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+
+@mixin tapperedLinearGradient($start, $mid, $end){
+    background: $mid; 
+    background:  -moz-linear-gradient(to right,  $start 0%,$mid 50%,$end 100%);
+    background:  -webkit-linear-gradient(to right,  $start 0%,$mid 50%,$end 100%);
+    background:  -o-linear-gradient(to right,  $start 0%,$mid 50%,$end 100%);
+    background:  -ms-linear-gradient(to right,  $start 0%,$mid 50%,$end 100%);
+    background:  linear-gradient(to right,  $start 0%,$mid 50%,$end 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$start, endColorstr=$end,GradientType=0 ); 
+}

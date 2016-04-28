@@ -182,6 +182,9 @@ var AYR = AYR || {};
     updateCurrPage: function() {
       var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
       AYR.currPageName = thisPageName = thisPage.replace('.html','');
+      if (AYR.isHome(AYR.currPageName)()){
+        AYR.currPageName === 'index';
+      }
     },
 
     transitionContent: function(page){
