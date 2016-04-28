@@ -152,7 +152,11 @@ var AYR = AYR || {};
       notify: function(page) {
         console.log('page nofify - ishome: ', AYR.isHome(page));
         console.log('pageContent notified - page: ', page);
-        AYR.pageState.innerPage(page);
+        if (AYR.isHome(page)){
+          AYR.pageState.innerPage('index');
+        } else {
+          AYR.pageState.innerPage(page);
+        }
       },
       innerPage: function(pName){
         document.querySelector('body').classList.add( pName + '-page');
@@ -182,9 +186,6 @@ var AYR = AYR || {};
     updateCurrPage: function() {
       var thisPage = location.href.split('/')[location.href.split('/').length -1 ];
       AYR.currPageName = thisPageName = thisPage.replace('.html','');
-      if (AYR.isHome(AYR.currPageName)()){
-        AYR.currPageName === 'index';
-      }
     },
 
     transitionContent: function(page){
