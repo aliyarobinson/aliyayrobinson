@@ -141,7 +141,8 @@ body {
   overflow: hidden; }
 
 a, button {
-  outline-color: transparent; }
+  outline-color: transparent;
+  outline: none; }
 
 a {
   color: inherit;
