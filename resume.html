@@ -11,7 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aliya Y. Robinson | Front End Interactive Developer | Resume</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="js/prefixfree.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+  <![endif]-->
   <link rel="icon" type="image/png" href="img/favicon.png" />
 </head>
 <body>
@@ -83,8 +87,8 @@
           </div>
           <div class="titles block block-3-wide">
             <h3 class="page-title">Professional Experience:</h3>
-            <div class="experience">
-              <div class="experience-mod chartbeat">
+            <ul class="experience">
+              <li class="experience-mod chartbeat">
                 <div class="position-title">
                   <span class="company">Chartbeat</span>/<span class="title-name">Marketing Engineer</span>
                 </div>
@@ -92,8 +96,8 @@
                 <div class="position-desc">
                   Developer of interactive marketing projects for Chartbeat.
                 </div>
-              </div>
-              <div class="experience-mod infor">
+              </li>
+              <li class="experience-mod infor">
                 <div class="position-title">
                   <span class="company">Infor | Hook &amp; Loop</span>/<span class="title-name">Software Engineer (Front-End)</span>
                 </div>
@@ -101,8 +105,8 @@
                 <div class="position-desc">
                   Various Rapid Interactive Prototyping. Built Infor.com Internal Micro Sites. Built of Infor.com pages. Product Front-End Builds. Also, Node/Express/Socket.io/MongoDB project development.
                 </div>
-              </div>
-              <div class="experience-mod mry">
+              </li>
+              <li class="experience-mod mry">
                 <div class="position-title">
                     <span class="company">MRY</span>/<span class="title-name">Associate Front-End Developer</span>
                 </div>
@@ -127,8 +131,8 @@
                         </a>
                     </div>
                 </div> -->
-              </div>
-              <div class="experience-mod sothbeys">
+              </li>
+              <li class="experience-mod sothbeys">
                   <div class="position-title">
                     <span class="company">Sothbey’s Int’l Realty CT</span>/<span class="title-name">Contract Front-End Developer</span>
                   </div>
@@ -136,8 +140,8 @@
                   <div class="position-desc">
                     Developed internal pages and ad banners for four company websites using jQuery, HTML, CSS, and Flash AS2.
                   </div>
-              </div>
-              <div class="experience-mod hit">
+              </li>
+              <li class="experience-mod hit">
                   <div class="position-title">
                     <span class="company">Hit Web Design</span>/<span class="title-name">Contract Flash & Zen Cart Deveopler</span>
                   </div>
@@ -145,8 +149,8 @@
                   <div class="position-desc">
                     Coordinated, designed, and developed small business websites using Dreamweaver, Flash, Photoshop, After Effects, Zen Cart and knowledge in HTML/DHTML and PHP.
                   </div>
-              </div>
-              <div class="experience-mod ibm">
+              </li>
+              <li class="experience-mod ibm">
                   <div class="position-title">
                     <span class="company">IBM Global Business Services</span>/<span class="title-name">Seibel CRM Consultant  </span>
                   </div>
@@ -154,8 +158,8 @@
                   <div class="position-desc">
                     Prepared documentation of testing results and research needs for General Motors system upgrade and integration projects. Cleared up technical fixes needed by working closely with key contacts of IBM business team and India based consulting firm, Wipro Technologies, application development team.
                   </div>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
         
@@ -224,11 +228,6 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="block block-1-wide art">
-        <h3 class="block-title"><span>Art</span>Works</h3>
-        <a href="./img/art/congac.jpg" class="thumb"><img src="img/art/congac.jpg" alt="art piece thumb - congac art"></a>
-        <a href="./img/art/congac.jpg" class="thumb"><img src="img/art/car.jpg" alt="art piece thumb - car art"></a>
-      </div> -->
       <div class="legal">  
         <span class="copyright">&copy; copyright 2016. All Rights Reserved. Aliya Y. Robinson.</span>
       </div>
@@ -243,6 +242,6 @@
     ga('create', 'UA-5627977-1', 'auto');
     ga('send', 'pageview');
   </script>
-  <script src="js/bundle.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
