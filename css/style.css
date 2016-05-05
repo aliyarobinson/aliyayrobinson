@@ -120,12 +120,13 @@ html {
   margin: 0; }
 
 html {
-  background: url("../img/fabric_plaid.png") 0 0; }
+  background-image: url(../img/painting-bkgd.png), url(../img/fabric_plaid.png);
+  background-position: center center, left top;
+  background-repeat: no-repeat, repeat; }
 
 body {
   font: 100 16px 'work_sans', arial, sans-serif;
   color: #767676;
-  background: url("../img/painting-bkgd.png") 0 0 no-repeat;
   transition: 500ms; }
 
 *,
