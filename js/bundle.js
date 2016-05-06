@@ -42,15 +42,12 @@ var AYR = AYR || {};
 
       AYR.pageLocation.registerObserver(AYR.pageState);
 
-      // var $loading = $('.loader').hide();
       var $loading = $('.loader');
       $(document)
         .ajaxStart(function () {
-          // $loading.show();
           $loading.removeClass('collapsed');
         })
         .ajaxStop(function () {
-          // $loading.hide();
           $loading.addClass('collapsed');
         });
           
@@ -114,7 +111,6 @@ var AYR = AYR || {};
       /***************************************************/
       $(document).on( AYR.clickHandler , '.site-nav a, .logo-wrapper a, .project .cta-btn, .btn.back', function(e) { 
         e.preventDefault();
-        // e.stopImmediatePropagation();
         console.log('*****************nav click*********************');
 
         if( History ) {

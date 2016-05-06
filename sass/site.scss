@@ -165,7 +165,7 @@ img {
 
 *******************************/
 .site-header {
-  padding: 20px 0;
+  padding: 20px 0 0;
   width: 100%;
   position: fixed;
   z-index: 5;
@@ -186,7 +186,8 @@ img {
 
 .logo-wrapper {
   width: 336px;
-  height: 314px;
+  // height: 314px;
+  height: 260px;
   float: left;
 
   a {
@@ -840,7 +841,7 @@ img{
   }
 
   nav {
-    height: 60px;
+    height: 50px;
 
     .btn {
       float: right;

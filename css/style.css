@@ -244,7 +244,7 @@ img {
 
 *******************************/
 .site-header {
-  padding: 20px 0;
+  padding: 20px 0 0;
   width: 100%;
   position: fixed;
   z-index: 5;
@@ -260,7 +260,7 @@ img {
 
 .logo-wrapper {
   width: 336px;
-  height: 314px;
+  height: 260px;
   float: left; }
   .logo-wrapper a {
     display: inline-block; }
@@ -736,7 +736,7 @@ img {
   .single-project .btn:hover {
     background: rgba(133, 133, 133, 0.7); }
 .single-project nav {
-  height: 60px; }
+  height: 50px; }
   .single-project nav .btn {
     float: right; }
 .single-project .cta-block {
