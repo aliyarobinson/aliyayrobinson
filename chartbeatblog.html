@@ -11,7 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aliya Y. Robinson | Front End Interactive Developer | Chartbeat Blog Reskin</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/prefixfree.min.js"></script>
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -25,7 +26,7 @@
         <span class="hide-copy">
           Aliya Y. Robinson
         </span>
-        <a href="index.html">
+        <a href="index.html" class="nav-trigger">
           <img src="img/logo1.png" alt="">
         </a>
       </h1>
@@ -38,20 +39,20 @@
       <nav class="site-nav" role="navigation">
         <ul>
           <li>
-            <a href="projects.html" data-content="projects">
+            <a href="projects.html" data-content="projects" class="nav-trigger">
               <span class="border-line"></span>
               <span>Latest</span>Projects
               <span class="border-line"></span>
             </a></li>
           <li>
-            <a href="resume.html" data-content="resume">
+            <a href="resume.html" data-content="resume" class="nav-trigger">
               <span class="border-line"></span>
               <span>Recent</span>Resume
               <span class="border-line"></span>
             </a>
           </li>
           <li>
-            <a href="contact.html" data-content="contact">
+            <a href="contact.html" data-content="contact" class="nav-trigger">
               <span class="border-line"></span>
               <span>Wanna Chat?</span>Contact Me
               <span class="border-line"></span>
@@ -62,11 +63,10 @@
     </div>
   </header>
   <main class="site-content" role="main">
-    <div id="content-holder"></div>
-    <section class="section content-container">
+    <section class="section content-container collapsed">
       <div class="content-wrapper wrapper single-project">
         <nav>
-          <a href="./projects.html" class="btn back">Back</a>
+          <a href="projects.html" class="btn back nav-trigger">Back</a>
         </nav>
         <div class="block-2-wide block image-show">
           <img src="img/chartbeatblog-1.png" alt="project responsive image">
@@ -154,14 +154,11 @@
           </li>
         </ul>
       </div>
-      <!-- <div class="block block-1-wide art">
-        <h3 class="block-title"><span>Art</span>Works</h3>
-        <a href="./img/art/congac.jpg" class="thumb"><img src="img/art/congac.jpg" alt="art piece thumb - congac art"></a>
-        <a href="./img/art/congac.jpg" class="thumb"><img src="img/art/car.jpg" alt="art piece thumb - car art"></a>
-      </div> -->
       <div class="legal">  
         <span class="copyright">&copy; copyright 2016. All Rights Reserved. Aliya Y. Robinson.</span>
       </div>
+    </div>
+    <div class="loader">
     </div>
   </footer>
   <script>
@@ -173,6 +170,9 @@
     ga('create', 'UA-5627977-1', 'auto');
     ga('send', 'pageview');
   </script>
-  <script src="js/bundle.js"></script>
+  <!-- <script src="js/script.min.js"></script> -->
+  <script src="js/d3.js"></script>
+  <script src="js/ayrUtils.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

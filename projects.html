@@ -11,7 +11,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Aliya Y. Robinson | Front End Interactive Developer | Projects</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/style.min.css"> -->
+  <link rel="stylesheet" href="css/style.css">
   <script src="js/prefixfree.min.js"></script>
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -25,7 +26,7 @@
         <span class="hide-copy">
           Aliya Y. Robinson
         </span>
-        <a href="index.html">
+        <a href="index.html" class="nav-trigger">
           <img src="img/logo1.png" alt="">
         </a>
       </h1>
@@ -38,20 +39,20 @@
       <nav class="site-nav" role="navigation">
         <ul>
           <li>
-            <a href="projects.html" data-content="projects">
+            <a href="projects.html" data-content="projects" class="nav-trigger">
               <span class="border-line"></span>
               <span>Latest</span>Projects
               <span class="border-line"></span>
             </a></li>
           <li>
-            <a href="resume.html" data-content="resume">
+            <a href="resume.html" data-content="resume" class="nav-trigger">
               <span class="border-line"></span>
               <span>Recent</span>Resume
               <span class="border-line"></span>
             </a>
           </li>
           <li>
-            <a href="contact.html" data-content="contact">
+            <a href="contact.html" data-content="contact" class="nav-trigger">
               <span class="border-line"></span>
               <span>Wanna Chat?</span>Contact Me
               <span class="border-line"></span>
@@ -62,8 +63,7 @@
     </div>
   </header>
   <main class="site-content" role="main">
-    <div id="content-holder" class=""></div>
-    <div class="project-page-content content-container">
+    <div class="project-page-content content-container collapsed">
       <div class="content-wrapper">
         <div class="title-block wrapper">
           <h2 class="page-title block-3-wide">Latest Projects</h2>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./chartbeat.html" class="cta-btn priority">View Project</a>
+                    <a href="chartbeat.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./aliyayrobinson.html" class="cta-btn priority">View Project</a>
+                    <a href="aliyayrobinson.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -147,7 +147,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./hakimrobinson.html" class="cta-btn priority">View Project</a>
+                    <a href="hakimrobinson.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -174,7 +174,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./chartbeatblog.html" class="cta-btn priority">View Project</a>
+                    <a href="chartbeatblog.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./tweetshow.html" class="cta-btn priority">View Project</a>
+                    <a href="tweetshow.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -228,7 +228,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./infor-healthcare.html" class="cta-btn priority">View Project</a>
+                    <a href="infor-healthcare.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -256,7 +256,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./chronicles.html" class="cta-btn priority">View Project</a>
+                    <a href="chronicles.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -285,7 +285,7 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./mry-blog.html" class="cta-btn priority">View Project</a>
+                    <a href="mry-blog.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
@@ -312,24 +312,13 @@
                 </div>
                 <div class="cta-block">
                   <div class="cta-btns">
-                    <a href="./neutrogena.html" class="cta-btn priority">View Project</a>
+                    <a href="neutrogena.html" class="cta-btn nav-trigger">View Project</a>
                   </div>
                 </div>
               </div>
             </div>
           </li>
         </ol>
-      </div>
-      <div class="loader">
-        <!-- <div class='uil-facebook-css' style='-webkit-transform:scale(0.99)'><div></div><div></div><div></div></div> -->
-        <!-- <div class="bubblingG">
-          <span id="bubblingG_1">
-          </span>
-          <span id="bubblingG_2">
-          </span>
-          <span id="bubblingG_3">
-          </span>
-        </div> -->
       </div>
     </div>
   </main>
@@ -399,6 +388,55 @@
         <span class="copyright">&copy; copyright 2016. All Rights Reserved. Aliya Y. Robinson.</span>
       </div>
     </div>
+    <div class="loader">
+      <div class="tally-marks">
+        <div class="mark vertical-mark"></div>
+        <div class="mark vertical-mark"></div>
+        <div class="mark vertical-mark"></div>
+        <div class="mark vertical-mark"></div>
+        <div class="mark diagonal-mark"></div>
+      </div>
+    </div>
+    <div class="old-browser-prompt collapsed">
+      <header>
+        <h3 class="title"><span class="icon fa-warning warning"></span>Outdated Browser Alert</h3>
+        <button class="icon fa-close close"></button>
+      </header>
+      <div class="description">
+        <p>
+          It looks like your browers is not up-to-date.
+        </p>
+        <p>
+          To view this website as it was intended, please upgrade to one of the following browsers. 
+        </p>
+      </div>
+      <ul class="new-browsers">
+        <li class="browser-link">
+          <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48126" target="_blank">
+              <span aria-hidden="true" class="icon fa-edge"></span>
+              <span class="hide-copy" aria-label="Download Microsoft Edge">  
+                Edge
+              </span>
+            </a>
+        </li>
+        <li class="browser-link">
+          <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">
+              <span aria-hidden="true" class="icon fa-firefox"></span>
+              <span class="hide-copy" aria-label="Download Mozilla Firefox">  
+                Firefox
+              </span>
+            </a>
+        </li>
+        <li class="browser-link">
+          <a href="https://www.google.com/chrome/browser/desktop/" target="_blank">
+              <span aria-hidden="true" class="icon fa-chrome"></span>
+              <span class="hide-copy" aria-label="Download Google Chrome">  
+                Chrome
+              </span>
+            </a>
+        </li>
+      </ul>
+    </div>
   </footer>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -409,6 +447,9 @@
     ga('create', 'UA-5627977-1', 'auto');
     ga('send', 'pageview');
   </script>
-  <script src="js/script.min.js"></script>
+  <!-- <script src="js/script.min.js"></script> -->
+  <script src="js/d3.js"></script>
+  <script src="js/ayrUtils.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

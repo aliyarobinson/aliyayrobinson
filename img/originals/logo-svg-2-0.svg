@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 310 276" xmlns="http://www.w3.org/2000/svg">
+	<style type="text/css"><![CDATA[
+        .line1 { stroke: url(#grad1); }
+        .l1-stop1 { stop-color: #767676;  stop-opacity: 0;}
+        .l1-stop2 { stop-color: #767676; stop-opacity: 1; }
+        .l1-stop3 { stop-color: #767676;  stop-opacity: 1;}
+        .l1-stop4 { stop-color: #767676;  stop-opacity: 0;}
+
+        .line2 { stroke: url(#grad2); }
+        .line2-stop1 { stop-color: #767676;  stop-opacity: 0;}
+        .line2-stop2 { stop-color: #767676; stop-opacity: 1; }
+        .line2-stop3 { stop-color: #767676;  stop-opacity: 0.5;}
+        .line2-stop4 { stop-color: #767676;  stop-opacity: 0;}
+
+        .line3 { stroke: url(#grad3); }
+        .line3-stop1 { stop-color: #767676;  stop-opacity: 0;}
+        .line3-stop2 { stop-color: #767676; stop-opacity: 1; }
+        .line3-stop3 { stop-color: #767676;  stop-opacity: 0.5;}
+        .line3-stop4 { stop-color: #767676;  stop-opacity: 0;}
+
+        .line4 { stroke: url(#grad4); }
+        .line4-stop1 { stop-color: #767676;  stop-opacity: 0;}
+        .line4-stop2 { stop-color: #767676; stop-opacity: 1; }
+        .line4-stop3 { stop-color: #767676;  stop-opacity: 0.5;}
+        .line4-stop4 { stop-color: #767676;  stop-opacity: 0;}
+      ]]>
+  	</style>
+	<defs>
+	 	<linearGradient id="grad1">
+	        <stop class="l1-stop1" offset="0%"/>
+	        <stop class="l1-stop2" offset="25%"/>
+	        <stop class="l1-stop3" offset="50%"/>
+	        <stop class="l1-stop4" offset="100%"/>
+	    </linearGradient>
+	    <linearGradient id="grad2">
+	        <stop class="line2-stop1" offset="0%"/>
+	        <stop class="line2-stop2" offset="50%"/>
+	        <stop class="line2-stop3" offset="80%"/>
+	        <stop class="line2-stop4" offset="100%"/>
+	    </linearGradient>
+	    <linearGradient id="grad3">
+	        <stop class="line3-stop1" offset="0%"/>
+	        <stop class="line3-stop2" offset="20%"/>
+	        <stop class="line3-stop3" offset="35%"/>
+	        <stop class="line3-stop4" offset="100%"/>
+	    </linearGradient>
+	    <linearGradient id="grad4">
+	        <stop class="line4-stop1" offset="0%"/>
+	        <stop class="line4-stop2" offset="50%"/>
+	        <stop class="line4-stop3" offset="80%"/>
+	        <stop class="line4-stop4" offset="100%"/>
+	    </linearGradient>
+	</defs>
+  <g transform="matrix(0.9999999999999999, 0, 0, 0.9999999999999999, -0.6796622806900956, 0.4398591319429066)">
+    <path d="M 169 33 L 127 32.5 L 127 101.5 L 186 101.5 L 176 87 C 202 73 197 40 169 33 Z" style="stroke: rgb(118, 118, 118); fill: none;"/>
+    <path class="line4" d="M 82 32 L 10 165"/>
+    <path class="line3" d="M 86 6 C 80 18 9 146 9 146"/>
+    <path class="line2" d="M 56 5 C 67 27 167 206 167 206"/>
+    <path class="line1" d="M 150 49 L 306 276"/>
+  </g>
+  <path d="M 71 33 L 144 33 L 127 66 L 127 102 L 88 102 L 88 65 L 71 33 Z" style="stroke: rgb(118, 118, 118); fill: none;"/>
+  <path d="M 108 102 L 71 33 L 33 102 L 108 102 Z" style="stroke: rgb(118, 118, 118); fill: none;"/>
+</svg>
