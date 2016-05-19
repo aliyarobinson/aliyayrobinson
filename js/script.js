@@ -14,10 +14,12 @@ var AYR = AYR || {};
   var contentDisplay = document.createElement('div');
   var contentPages = document.createElement('div');
   var displayContent = document.querySelector('.content-display-wrapper > .content-display');
-  var loader = document.querySelector('.loader');
+  var loader = document.querySelector('.loader-wrapper');
   var menuBtn = document.querySelector('.menu-btn');
   var siteNav = document.querySelector('.site-nav');
   var siteHeader = document.querySelector('.site-header');
+  var last_known_scroll_position = 0;
+  var ticking = false;
 
   // If ontouchstart exists then set click handler to touchstart otherwise set clickhandler to click
   var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
@@ -86,6 +88,9 @@ var AYR = AYR || {};
         this.classList.toggle('active');
         siteNav.classList.toggle('active');
         siteHeader.classList.toggle('mobile-active');
+        // if(hasClass(siteHeader, 'mobile-active')){
+        //   siteHeader.classList.remove('small');
+        // }
       });
 
 
@@ -94,8 +99,6 @@ var AYR = AYR || {};
       /***************************************************/
       // Reference: https://developer.mozilla.org/en-US/docs/Web/Events/scroll
       // Reference: http://www.html5rocks.com/en/tutorials/speed/animations/
-      var last_known_scroll_position = 0;
-      var ticking = false;
 
       function doSomething(scroll_pos) {
         if(ayrApi.isMobile() === false) {
@@ -125,6 +128,8 @@ var AYR = AYR || {};
       /***************************************************/
       window.onload = function (e,afterPages) {
         AYR.updateCurrPage();
+
+        ayrApi.toTop();
 
         // Create Wrapper element that will hold the content sliding into view
         contentDisplayWrapper.classList.add('content-display-wrapper');
@@ -240,7 +245,15 @@ var AYR = AYR || {};
 
       // start process
       optimizedResize.add(function() {
-          document.querySelector('.site-header').classList.remove('small');
+        if(ayrApi.isMobile()){
+          siteHeader.classList.remove('small');
+        } else {
+          if(last_known_scroll_position >= 100 ){
+            siteHeader.classList.add('small');
+          }else{
+            siteHeader.classList.remove('small');
+          }
+        }
       });
 
     }, // End Init
@@ -311,6 +324,7 @@ var AYR = AYR || {};
 
     transitionContent: function(page){
       console.log('*****************transitionContent*********************');
+      ayrApi.toTop();
 
       var pageURL = page + ".html";
 
@@ -330,7 +344,7 @@ var AYR = AYR || {};
       if(AYR.currPageName === "resume"){
         AYR.growSkills();
       }
-      ayrApi.toTop();
+      // ayrApi.toTop();
     }
   };
 
