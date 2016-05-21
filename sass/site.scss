@@ -27,6 +27,10 @@ body {
   font: 100 16px 'work_sans', arial, sans-serif;
   color: $font-color;
   transition: 500ms;
+  
+  &.in-transition {
+    transition: transform 900ms ease;
+  }
 }
 
 *,

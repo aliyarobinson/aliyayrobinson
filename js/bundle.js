@@ -22,7 +22,32 @@ var ayrApi = (function  () {
   };
 
   api.toTop = function(e){
-    document.querySelector('body').scrollTop = 0;
+    targetOffset = document.querySelector('body');
+    currentPosition = api.getPageScroll();
+
+    targetOffset.classList.add('in-transition');
+    targetOffset.style.WebkitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+    targetOffset.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+    targetOffset.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
+
+    window.setTimeout(function () {
+      targetOffset.classList.remove('in-transition');
+      targetOffset.style.cssText = "";
+      window.scrollTo(0, targetOffset);
+    }, 0);
+  };
+
+  api.getPageScroll = function() {
+    var yScroll;
+
+    if (window.pageYOffset) {
+      yScroll = window.pageYOffset;
+    } else if (document.documentElement && document.documentElement.scrollTop) {
+      yScroll = document.documentElement.scrollTop;
+    } else if (document.body) {
+      yScroll = document.body.scrollTop;
+    }
+    return yScroll;
   };
 
   api.hasClass = function(el, className) {
@@ -169,7 +194,6 @@ var AYR = AYR || {};
           console.log('*****************onpopstate/onload triggered*********************');
           AYR.updateCurrPage();
           AYR.pageLocation.notifyObservers(AYR.currPageName);
-          ayrApi.toTop();
         }
 
         /**************************************/
@@ -459,7 +483,6 @@ var AYR = AYR || {};
       if(AYR.currPageName === "resume"){
         AYR.growSkills();
       }
-      ayrApi.toTop();
     }
   };
 

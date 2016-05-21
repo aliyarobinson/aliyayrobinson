@@ -51,7 +51,6 @@ var AYR = AYR || {};
           console.log('*****************onpopstate/onload triggered*********************');
           AYR.updateCurrPage();
           AYR.pageLocation.notifyObservers(AYR.currPageName);
-          ayrApi.toTop();
         }
 
         /**************************************/
@@ -341,7 +340,6 @@ var AYR = AYR || {};
       if(AYR.currPageName === "resume"){
         AYR.growSkills();
       }
-      ayrApi.toTop();
     }
   };
 
