@@ -10,7 +10,7 @@ var AYR = AYR || {};
   var cachedContent = document.createElement('div');
   var mainContent = document.querySelector('main');
   var onloadContent = document.querySelector('.content-container');
-  var contentDisplayWrapper = document.createElement('div');
+  var contentDisplayWrapper = document.querySelector('.content-display-wrapper');
   var contentDisplay = document.createElement('div');
   var contentPages = document.createElement('div');
   var displayContent = document.querySelector('.content-display-wrapper > .content-display');
@@ -88,9 +88,6 @@ var AYR = AYR || {};
         this.classList.toggle('active');
         siteNav.classList.toggle('active');
         siteHeader.classList.toggle('mobile-active');
-        // if(hasClass(siteHeader, 'mobile-active')){
-        //   siteHeader.classList.remove('small');
-        // }
       });
 
 
@@ -131,10 +128,7 @@ var AYR = AYR || {};
 
         ayrApi.toTop();
 
-        // Create Wrapper element that will hold the content sliding into view
-        contentDisplayWrapper.classList.add('content-display-wrapper');
-
-        // Create initial element of sliding content
+        // Add class to element of sliding content
         contentDisplay.classList.add('content-display');
 
         // Create Element that will hold all page content elements
@@ -254,6 +248,9 @@ var AYR = AYR || {};
             siteHeader.classList.remove('small');
           }
         }
+
+        // Resize Content Display Wrapper based on new height of content on resize
+        contentDisplayWrapper.style.height = document.querySelector('.content-pages > .' + AYR.currPageName + '-page').offsetHeight + 'px';
       });
 
     }, // End Init
@@ -344,7 +341,7 @@ var AYR = AYR || {};
       if(AYR.currPageName === "resume"){
         AYR.growSkills();
       }
-      // ayrApi.toTop();
+      ayrApi.toTop();
     }
   };
 
