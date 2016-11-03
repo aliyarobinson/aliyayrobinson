@@ -25,7 +25,7 @@ var AYR = AYR || {};
   var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
 
   // Names of all pages
-  var pageNames = ['index', 'projects', 'resume', 'contact', 'chartbeat', 'aliyayrobinson', 'hakimrobinson', 'chartbeatblog', 'chronicles', 'infor-healthcare', 'mry-blog', 'neutrogena', 'tweetshow'];
+  var pageNames = ['index', 'projects', 'resume', 'contact', 'oksanatanasiv', 'chartbeat', 'aliyayrobinson', 'hakimrobinson', 'chartbeatblog', 'chronicles', 'infor-healthcare', 'mry-blog', 'neutrogena', 'tweetshow'];
 
   /**************************************/
   /*   Application Object
@@ -330,13 +330,28 @@ var AYR = AYR || {};
 
 
       var newPageContainer = document.createElement('div');
+
+      // Clone new page contents
       var newPage =  document.querySelector('.content-pages > .' + AYR.currPageName + '-page').cloneNode(true);
+      
+      // Add class content-display to new page 
       newPage.classList.add('content-display');
+
+      // Update container hieght
       contentDisplayWrapper.style.height = document.querySelector('.content-pages > .' + AYR.currPageName + '-page').offsetHeight + 'px';
+      
+      // Add cloned page content to container
       contentDisplayWrapper.appendChild(newPage);
+      
+      // Move any active containers to the left of the screen, out of the view of the user.
       document.querySelector('.active').style.left = -document.body.offsetWidth + 'px';
+
+      // Make cloned page active. The active class adds transition animation
       newPage.classList.add('active');
+
+      // Remove the old active container
       document.querySelectorAll('.active')[0].parentNode.removeChild(document.querySelectorAll('.active')[0]);
+      
       if(AYR.currPageName === "resume"){
         AYR.growSkills();
       }
