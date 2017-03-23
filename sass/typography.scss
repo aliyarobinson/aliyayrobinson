@@ -108,6 +108,19 @@ strong {
   color: #000;
 }
 
+.acsent-copy {
+  font: 16px alex_brush,arial,sans-serif;
+  &.large {
+    font-size: 40px;
+  }
+}
+
+.right-copy {
+  float: right;
+  margin: 20px 50px;
+}
+  
+
 p {
   margin: 20px 0;
   line-height: 28px;
@@ -117,4 +130,16 @@ p {
 
 p:first-child {
   margin-top: 0;
+}
+
+.big-copy {
+  p {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
 }
