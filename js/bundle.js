@@ -168,7 +168,7 @@ var AYR = AYR || {};
   var clickHandler = ('ontouchstart' in document.documentElement ? "touchstart" : "click");
 
   // Names of all pages
-  var pageNames = ['index', 'projects', 'resume', 'contact', 'oksanatanasiv', 'chartbeat', 'aliyayrobinson', 'hakimrobinson', 'chartbeatblog', 'chronicles', 'infor-healthcare', 'mry-blog', 'neutrogena', 'tweetshow'];
+  var pageNames = ['index', 'projects', 'resume', 'contact', 'pjtflyers', 'pjtwebsite', 'oksanatanasiv', 'chartbeat', 'aliyayrobinson', 'hakimrobinson', 'chartbeatblog', 'chronicles', 'infor-healthcare', 'mry-blog', 'neutrogena', 'tweetshow'];
 
   /**************************************/
   /*   Application Object
